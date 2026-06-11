@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PLC MQTT Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="header">
+
+    <h1>PLC MQTT Dashboard</h1>
+
+    <div class="info">
+        Status :
+        <span id="status" class="online">🟢 ONLINE</span>
+    </div>
+
+    <div class="info">
+        Last Update :
+        <span id="lastUpdate">-</span>
+    </div>
+
+</div>
+
+<div class="container">
+
+    <!-- VOLTAGE -->
+    <div class="card">
+        <h2>Voltage</h2>
+        <div class="value">
+            <span id="voltage">0</span>
+            <span class="unit">V</span>
+        </div>
+    </div>
+
+    <!-- CURRENT -->
+    <div class="card">
+        <h2>Current</h2>
+        <div class="value">
+            <span id="current">0</span>
+            <span class="unit">A</span>
+        </div>
+    </div>
+
+    <!-- POWER -->
+    <div class="card">
+        <h2>Power</h2>
+        <div class="value">
+            <span id="power">0</span>
+            <span class="unit">kW</span>
+        </div>
+    </div>
+
+</div>
+
+
+</div> <!-- container -->
+
+<div class="chart-container">
+    <canvas id="trendChart"></canvas>
+</div>
+
+<!-- SCRIPT WAJIB DI BAWAH -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+</body>
+
+</html>
